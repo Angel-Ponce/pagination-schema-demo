@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 200ms;
+  transition-property: transform;
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &.primary {
+    background-color: azure;
+    color: #212121;
+  }
+
+  &.secondary {
+    background-color: #ffffff65;
+    color: azure;
+  }
+
+  &.tertiary {
+    background-color: transparent;
+    color: inherit;
+  }
+}
