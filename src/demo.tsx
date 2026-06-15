@@ -10,7 +10,6 @@ export const Demo = () => {
     total: 100,
     perPage: 10,
     currentPage: 1,
-    autoCalibrate: true,
   });
 
   const [selectedKey, setSelectedKey] = useState<
@@ -54,25 +53,18 @@ export const Demo = () => {
         key: "boundaryCount",
         title: "Boundary count",
         description:
-          "Indicates how many pages show at the start and end of your pagination structure",
+          "Indicates how many pages show at the start and end of your pagination structure (default 1)",
         type: "number",
       },
       siblingCount: {
         key: "siblingCount",
         title: "Sibling count",
         description:
-          "Indicates how many pages show at the sides of your current page structure",
+          "Indicates how many pages show at the sides of your current page structure (default 1)",
         type: "number",
       },
-      autoCalibrate: {
-        key: "autoCalibrate",
-        title: "Auto calibrate",
-        description:
-          "Mutates the original output array to have always the same length to prevent UI flickering",
-        type: "checkbox",
-      },
     }),
-    []
+    [],
   );
 
   const selectedConfig = useMemo(
@@ -80,7 +72,7 @@ export const Demo = () => {
       selectedKey
         ? configAttributes[selectedKey as keyof PaginationConfig]
         : undefined,
-    [selectedKey, configAttributes]
+    [selectedKey, configAttributes],
   );
 
   return (
@@ -100,11 +92,11 @@ export const Demo = () => {
               <div
                 className={clsx(
                   styles.circle,
-                  selectedKey === key && styles.selected
+                  selectedKey === key && styles.selected,
                 )}
                 onClick={() =>
                   setSelectedKey((prevKey) =>
-                    prevKey === key ? undefined : key
+                    prevKey === key ? undefined : key,
                   )
                 }
               >
@@ -118,11 +110,6 @@ export const Demo = () => {
               value={
                 attributes.type === "number"
                   ? ((config[key as keyof PaginationConfig] ?? "") as string)
-                  : undefined
-              }
-              checked={
-                attributes.type === "checkbox"
-                  ? (config[key as keyof PaginationConfig] as boolean)
                   : undefined
               }
               onChange={({ currentTarget }) =>
@@ -169,8 +156,8 @@ export const Demo = () => {
                 page === config.currentPage
                   ? "primary"
                   : page === 0
-                  ? "tertiary"
-                  : "secondary"
+                    ? "tertiary"
+                    : "secondary"
               }
               onClick={() =>
                 setConfig((config) => ({ ...config, currentPage: page }))

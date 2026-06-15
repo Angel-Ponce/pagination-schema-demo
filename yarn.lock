@@ -1385,10 +1385,10 @@ p-locate@^5.0.0:
   dependencies:
     p-limit "^3.0.2"
 
-pagination-schema@^1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/pagination-schema/-/pagination-schema-1.4.6.tgz#92449827f08e8f3304925bf9d325cfb1aeff803d"
-  integrity sha512-f9Osw+OgFNLc7nTYyez3i5HRBArbf2uwUeGP7Qrv/EFNUWX6Gf7A28taMJzL8Jj3IBLfpHlRJokH3dJWl/p7Zg==
+pagination-schema@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pagination-schema/-/pagination-schema-2.0.0.tgz#75cc03d0102bc2e70e1771bb8940b7a64fe727ea"
+  integrity sha512-yDOcS/kUq4wBWdgbNdNdX/vlwjH82d6Q7vNV0FTx2BTnFBLLtqdcrXzi1uKbjeHzGJbcC9SP48gCGthv/mbcRA==
 
 parent-module@^1.0.0:
   version "1.0.1"

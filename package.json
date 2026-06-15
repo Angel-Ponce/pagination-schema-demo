@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "pagination-schema": "^1.4.6",
+    "pagination-schema": "^2.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
